@@ -53,6 +53,8 @@ class TutorialVideo extends Component {
         });
     }
     componentWillUnmount(){
+        const tutorialVideo = document.getElementById("tutorialVideo");
+        const showButton = document.getElementById("showTutorialButton");
         document.removeEventListener("markerFound", function(){
             if(window.getComputedStyle(tutorialVideo).display === "none"){
                 showButton.style.setProperty("display", "inline-block");
