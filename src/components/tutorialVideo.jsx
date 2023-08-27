@@ -40,6 +40,21 @@ class TutorialVideo extends Component {
         hideButton.style.setProperty("display", "none");
         this.showTutorialButton();
     }
+    componentDidMount(){
+        const tutorialVideo = document.getElementById("tutorialVideo");
+        const showButton = document.getElementById("showTutorialButton");
+        document.addEventListener("markerFound", function(){
+            if(window.getComputedStyle(tutorialVideo).display === "none"){
+                showButton.style.setProperty("display", "inline-block");
+            }
+        });
+        document.addEventListener("markerLost", function(){
+            showButton.style.setProperty("display", "none");
+        });
+    }
+    componentWillUnmount(){
+        document.removeEventListener();
+    }
 }
 
 export default TutorialVideo;
