@@ -21,7 +21,7 @@ class NrealGlasses extends Component {
                         <a-entity
                             gltf-model="./Nreal light glasses/Nreal Light.glb"
                             scale="40 40 40"
-                            position="130 0 -70"
+                            position="110 0 -70"
                             rotation="270 0 0"
                         >
                         </a-entity>
