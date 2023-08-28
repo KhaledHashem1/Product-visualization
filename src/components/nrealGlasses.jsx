@@ -35,7 +35,7 @@ class NrealGlasses extends Component {
                 );
             });
         }
-        document.getElementById("NrealModel").on("animationcomplete", function (event) {
+        document.getElementById("NrealModel").addEventListener("animationcomplete", function (event) {
             if (document.getElementById("NrealModel").attr("animation__scale")) {
                 document.getElementById("NrealModel").removeAttr("animation__scale");
             }
