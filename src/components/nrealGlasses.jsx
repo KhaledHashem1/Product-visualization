@@ -36,8 +36,8 @@ class NrealGlasses extends Component {
             });
         }
         document.getElementById("NrealModel").addEventListener("animationcomplete", function (event) {
-            if (document.getElementById("NrealModel").attr("animation__scale")) {
-                document.getElementById("NrealModel").removeAttr("animation__scale");
+            if (document.getElementById("NrealModel").getAttribute("animation__scale")) {
+                document.getElementById("NrealModel").removeAttribute("animation__scale");
             }
       });
     }
@@ -73,7 +73,7 @@ class NrealGlasses extends Component {
                         id="NrealModel"
                         gltf-model="./Nreal light glasses/Nreal Light.glb"
                         scale="0 0 0"
-                        position='-5 -10 -30'
+                        position='0 0 -30'
                         rotation="0 0 0"
                     >
                     </a-entity>
